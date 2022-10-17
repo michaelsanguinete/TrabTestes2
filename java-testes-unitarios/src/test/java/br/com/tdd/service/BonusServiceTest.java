@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.Date;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -46,7 +46,7 @@ class BonusServiceTest {
 	}
 
 	private Funcionario criarFuncionario(BigDecimal salario) {
-		return new Funcionario("Rodrigo", LocalDate.now(), salario);
+		return new Funcionario("Michael", new Date(), salario);
 	}
 
 }

@@ -2,25 +2,29 @@ package br.com.tdd.modelo;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Funcionario {
 
 	private String nome;
-	private LocalDate dataAdmissao;
+	private Date dataAdmissao;
 	private BigDecimal salario;
+	private int mesesEmpregado;
 
-	public Funcionario(String nome, LocalDate dataAdmissao, BigDecimal salario) {
+	public Funcionario(String nome, Date dataAdmissao, BigDecimal salario) {
 		this.nome = nome;
 		this.dataAdmissao = dataAdmissao;
 		this.salario = salario;
+	}
+	
+	public Funcionario() {
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public LocalDate getDataAdmissao() {
+	public Date getDataAdmissao() {
 		return dataAdmissao;
 	}
 
@@ -37,7 +41,16 @@ public class Funcionario {
 		return salario.multiply(percentual);
 	}
 
+	public int getMesesEmpregado() {
+		return mesesEmpregado;
+	}
+
+	public void setMesesEmpregado(int mesesEmpregado) {
+		this.mesesEmpregado = mesesEmpregado;
+	}
 }
+
+
 
 
 

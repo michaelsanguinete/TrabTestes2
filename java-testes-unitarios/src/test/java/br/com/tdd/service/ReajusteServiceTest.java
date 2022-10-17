@@ -3,7 +3,7 @@ package br.com.tdd.service;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.Date;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +19,7 @@ public class ReajusteServiceTest {
 	@BeforeEach
 	public void inicializar() {
 		this.service = new ReajusteService();
-		this.fulano = new Funcionario("Fulano", LocalDate.now(), new BigDecimal("2000.00"));
+		this.fulano = new Funcionario("Fulano", new Date(), new BigDecimal("2000.00"));
 	}
 
 	@Test
